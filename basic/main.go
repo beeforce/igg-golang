@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	"github.com/nitipatl/go-deck"
 )
 
@@ -15,8 +15,9 @@ func main() {
 	// hand.Print()
 	// remainingCards.Print()
 	// cards.Print()
-	if err := cards.SaveToFile("deck.txt"); err != nil {
-		fmt.Println("Error: ", err)
-	}
-	fmt.Println(cards.NewDeckFromFile("deck.txt"))
+	// if err := cards.SaveToFile("deck.txt"); err != nil {
+	// 	fmt.Println("Error: ", err)
+	// }
+	cards.Shuffle()
+	cards.Print()
 }
