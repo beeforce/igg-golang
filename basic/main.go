@@ -1,23 +1,21 @@
 package main
 
-import (
-	// "fmt"
-	"github.com/nitipatl/go-deck"
-)
+import "fmt"
 
-// import (
-// 	deck "github.com/nitipatl/go-deck"
-// )
+type person struct {
+	firstName string
+	lastName string
+}
+
+func (p person) Print() {
+	fmt.Println(p)
+}
 
 func main() {
-	cards := deck.NewDeck()
-	// hand, remainingCards := deck.Deal(cards, 5)
-	// hand.Print()
-	// remainingCards.Print()
-	// cards.Print()
-	// if err := cards.SaveToFile("deck.txt"); err != nil {
-	// 	fmt.Println("Error: ", err)
-	// }
-	cards.Shuffle()
-	cards.Print()
+	bee := person{
+		"Buri",
+		"Paoton",
+	}
+
+	bee.Print()
 }

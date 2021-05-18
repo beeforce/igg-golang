@@ -54,7 +54,7 @@ func (d deck) NewDeckFromFile(filename string) deck {
 	return deck(strings.Split(string(bs), ","))
 }
 
-func (d deck) Shuffle() deck {
+func (d deck) Shuffle() {
 	source := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(source)
 	for i := range d {
@@ -63,5 +63,4 @@ func (d deck) Shuffle() deck {
 		d[i] = d[position]
 		d[position] = temp
 	}
-	return d
 }
